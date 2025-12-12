@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+  </head>
+  <body>
+    <h1>설문조사</h1>
+    <form action="#" method="get">
+      <h3>1. 성별을 선택하세요 (택 1)</h3>
+      <div>
+        <label> <input type="radio" name="gender" value="male" /> 남성 </label>
+        <label>
+          <input type="radio" name="gender" value="female" /> 여성
+        </label>
+      </div>
+
+      <h3>2. 좋아하는 음식을 선택하세요 (중복 가능)</h3>
+      <div>
+        <label>
+          <input type="checkbox" name="food" value="korean" /> 한식
+        </label>
+        <label>
+          <input type="checkbox" name="food" value="chinese" /> 중식
+        </label>
+        <label>
+          <input type="checkbox" name="food" value="japanese" /> 일식
+        </label>
+      </div>
+
+      <h3>3. 건의사항</h3>
+      <div>
+        <textarea
+          name="feedback"
+          rows="5"
+          cols="50"
+          placeholder="자유롭게 적어주세요."
+        ></textarea>
+      </div>
+      <hr />
+
+      <button type="submit">제출하기</button>
+      <button type="reset">초기화</button>
+    </form>
+  </body>
+</html>

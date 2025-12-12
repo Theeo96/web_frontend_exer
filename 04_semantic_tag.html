@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 시멘틱 구조 종합 예제</title>
+    <style>
+        /* 학습을 돕기 위한 간단한 스타일 (구조 시각화) */
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        /* 시멘틱 태그별 영역 표시 */
+        header, nav, main, section, article, aside, footer {
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 2px dashed #ccc; /* 영역 구분을 위한 점선 */
+        }
+
+        /* 각 영역별 색상 구분 */
+        header { background-color: #ffe0b2; border-color: #ff9800; }
+        nav { background-color: #bbdefb; border-color: #2196f3; }
+        main { background-color: #ffffff; border-color: #4caf50; border-style: solid; display: flex; flex-wrap: wrap; gap: 20px;}
+        section { background-color: #e8f5e9; flex: 2; min-width: 300px; }
+        aside { background-color: #e1bee7; flex: 1; min-width: 200px; border-color: #9c27b0; }
+        footer { background-color: #cfd8dc; border-color: #607d8b; clear: both; }
+
+        h2 { margin-top: 0; }
+        .tag-name {
+            font-size: 0.8em;
+            color: #555;
+            background: rgba(255,255,255,0.7);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. 헤더 영역: 사이트 로고 및 제목 -->
+    <header>
+        <span class="tag-name">&lt;header&gt;</span>
+        <h1>맛있는 코딩 키친</h1>
+        <p>HTML5 기초부터 탄탄하게 배우는 요리법</p>
+    </header>
+
+    <!-- 2. 네비게이션 영역: 메뉴 링크 -->
+    <nav>
+        <span class="tag-name">&lt;nav&gt;</span>
+        <ul>
+            <li><a href="#">홈으로</a></li>
+            <li><a href="#">강의 소개</a></li>
+            <li><a href="#">수강 신청</a></li>
+            <li><a href="#">문의하기</a></li>
+        </ul>
+    </nav>
+
+    <!-- 3. 메인 콘텐츠 영역: 핵심 내용 -->
+    <main>
+        <!-- 3-1. 섹션: 주제별 콘텐츠 그룹 -->
+        <section>
+            <span class="tag-name">&lt;section&gt; (Main Content)</span>
+            <h2>오늘의 추천 강의</h2>
+            
+            <!-- 3-1-1. 아티클: 독립적인 글 -->
+            <article>
+                <span class="tag-name">&lt;article&gt;</span>
+                <h3>HTML5란 무엇인가?</h3>
+                <img src="https://via.placeholder.com/150x100?text=HTML5+Logo" alt="HTML5 로고 예시">
+                <p>HTML5는 웹의 구조를 담당하는 마크업 언어의 최신 표준입니다. 시멘틱 태그를 통해 웹 접근성을 높일 수 있습니다.</p>
+                <a href="#">더 읽기...</a>
+            </article>
+
+            <article>
+                <span class="tag-name">&lt;article&gt;</span>
+                <h3>CSS3와의 조화</h3>
+                <p>구조는 HTML이 담당하고, 디자인은 CSS가 담당합니다. 이 둘은 떼려야 뗄 수 없는 관계입니다.</p>
+            </article>
+        </section>
+
+        <!-- 3-2. 어사이드: 부가 정보/사이드바 -->
+        <aside>
+            <span class="tag-name">&lt;aside&gt; (Sidebar)</span>
+            <h3>인기 검색어</h3>
+            <ul>
+                <li>코딩 기초</li>
+                <li>웹 디자인</li>
+                <li>프론트엔드</li>
+            </ul>
+            <hr>
+            <h3>광고</h3>
+            <p>이곳에는 배너 광고나 관련 없는 링크가 들어갈 수 있습니다.</p>
+        </aside>
+    </main>
+
+    <!-- 4. 푸터 영역: 하단 정보 -->
+    <footer>
+        <span class="tag-name">&lt;footer&gt;</span>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>
+                <p>&copy; 2024 Coding Kitchen. All rights reserved.</p>
+                <address>서울시 강남구 테헤란로 123</address>
+            </div>
+            
+            <!-- 폼 요소 실습 -->
+            <form action="#" method="get">
+                <label for="newsletter">뉴스레터 구독: </label>
+                <input type="email" id="newsletter" placeholder="이메일 주소 입력">
+                <button type="submit">구독</button>
+            </form>
+        </div>
+    </footer>
+
+</body>
+</html>
