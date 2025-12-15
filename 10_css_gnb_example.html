@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox 네비게이션</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;  /* 로고와 메뉴 양끝 배치 */
+      align-items: center;             /* 세로 가운데 정렬 */
+      padding: 15px 30px;
+      background-color: #2c3e50;
+    }
+
+    .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 30px;                       /* 메뉴 아이템 간격 */
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-menu a:hover {
+      color: #3498db;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">MyBrand</div>
+    <ul class="nav-menu">
+      <li><a href="#">홈</a></li>
+      <li><a href="#">서비스</a></li>
+      <li><a href="#">포트폴리오</a></li>
+      <li><a href="#">문의하기</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

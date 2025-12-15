@@ -1,0 +1,38 @@
+div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quote-card{
+    box-sizing: border-box;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(246, 242, 250);
+    padding: 20px;
+    border: 2px black solid;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px #eee;
+}
+
+.quote {
+    margin: 10px auto;
+    padding: 20px 30px;
+    background-color: rgba(202, 187, 212, 0.3);
+    border-left: 6px solid rgb(202, 187, 212);
+    border-radius: 8px;
+    font-size: 15px; 
+    font-style: italic;
+    font-weight: 500;
+    color: #333;
+}
+
+.person {
+    margin-top: 10px;
+    text-align: right;
+    font-size: 20px;
+    font-style: italic;
+    color: #555;
+    font-weight: 600;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 카드 그리드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        /* 카드 컨테이너 */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* 카드 기본 스타일 (모바일: 1열) */
+        .card {
+            flex: 1 1 100%;  /* 전체 너비 */
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .card-image {
+            height: 200px;
+            background-color: #3498db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-title {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .card-text {
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        
+        /* 태블릿: 2열 */
+        @media (min-width: 768px) {
+            .card {
+                flex: 1 1 calc(50% - 10px);  /* 2열 (gap 고려) */
+            }
+        }
+        
+        /* 데스크탑: 3열 */
+        @media (min-width: 1024px) {
+            .card {
+                flex: 1 1 calc(33.333% - 14px);  /* 3열 */
+            }
+        }
+        
+        /* 대형 데스크탑: 4열 */
+        @media (min-width: 1200px) {
+            .card {
+                flex: 1 1 calc(25% - 15px);  /* 4열 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>반응형 카드 그리드</h1>
+    
+    <div class="card-container">
+        <div class="card">
+            <div class="card-image" style="background-color: #e74c3c;">🎨</div>
+            <div class="card-content">
+                <h3 class="card-title">디자인</h3>
+                <p class="card-text">사용자 중심의 UI/UX 디자인으로 최고의 경험을 제공합니다.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-image" style="background-color: #3498db;">💻</div>
+            <div class="card-content">
+                <h3 class="card-title">개발</h3>
+                <p class="card-text">최신 기술을 활용한 웹/앱 개발 서비스를 제공합니다.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-image" style="background-color: #2ecc71;">📱</div>
+            <div class="card-content">
+                <h3 class="card-title">모바일</h3>
+                <p class="card-text">iOS와 Android 모두 지원하는 앱을 개발합니다.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-image" style="background-color: #9b59b6;">🚀</div>
+            <div class="card-content">
+                <h3 class="card-title">마케팅</h3>
+                <p class="card-text">디지털 마케팅으로 비즈니스 성장을 도와드립니다.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-image" style="background-color: #f39c12;">📊</div>
+            <div class="card-content">
+                <h3 class="card-title">분석</h3>
+                <p class="card-text">데이터 기반의 인사이트를 제공합니다.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-image" style="background-color: #1abc9c;">🔒</div>
+            <div class="card-content">
+                <h3 class="card-title">보안</h3>
+                <p class="card-text">안전한 서비스 운영을 위한 보안 솔루션입니다.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

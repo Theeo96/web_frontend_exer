@@ -1,0 +1,19 @@
+.business-card{
+    box-sizing: border-box;
+    width: 400px;
+    height: 200px;
+    background-color: lightblue;
+    padding: 10px;
+    border: 2px black solid;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.business-card:hover{
+    background-color: white;
+    box-shadow: 5px 5px #eee;
+}
+
+.item{
+    margin-bottom: 10px;
+}

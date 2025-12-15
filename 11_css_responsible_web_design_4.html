@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 사이드바</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        /* 레이아웃 컨테이너 */
+        .layout {
+            display: flex;
+            flex-direction: column;  /* 모바일: 세로 배치 */
+            min-height: 100vh;
+        }
+        
+        /* 사이드바 (모바일에서는 상단 메뉴) */
+        .sidebar {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+        }
+        
+        .sidebar h2 {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .sidebar-menu {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .sidebar-menu a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            background-color: #34495e;
+            border-radius: 5px;
+        }
+        
+        .sidebar-menu a:hover {
+            background-color: #3498db;
+        }
+        
+        /* 메인 콘텐츠 */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            background-color: #ecf0f1;
+        }
+        
+        .main-content h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .main-content p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        /* 태블릿 이상: 가로 배치 */
+        @media (min-width: 768px) {
+            .layout {
+                flex-direction: row;  /* 가로 배치 */
+            }
+            
+            .sidebar {
+                flex: 0 0 250px;  /* 고정 너비 */
+                min-height: 100vh;
+            }
+            
+            .sidebar-menu {
+                flex-direction: column;  /* 세로 메뉴 */
+            }
+            
+            .sidebar-menu a {
+                background-color: transparent;
+                border-radius: 0;
+                border-left: 3px solid transparent;
+            }
+            
+            .sidebar-menu a:hover {
+                background-color: rgba(255,255,255,0.1);
+                border-left-color: #3498db;
+            }
+        }
+        
+        /* 데스크탑: 더 넓은 사이드바 */
+        @media (min-width: 1024px) {
+            .sidebar {
+                flex: 0 0 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <h2>📁 메뉴</h2>
+            <ul class="sidebar-menu">
+                <li><a href="#">🏠 대시보드</a></li>
+                <li><a href="#">👥 사용자 관리</a></li>
+                <li><a href="#">📊 통계</a></li>
+                <li><a href="#">⚙️ 설정</a></li>
+                <li><a href="#">❓ 도움말</a></li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1>반응형 사이드바 레이아웃</h1>
+            <p>이 레이아웃은 화면 크기에 따라 다르게 표시됩니다.</p>
+            <p><strong>모바일 (768px 미만):</strong> 사이드바가 상단에 가로 메뉴로 표시됩니다.</p>
+            <p><strong>태블릿/데스크탑 (768px 이상):</strong> 왼쪽에 세로 사이드바가 표시됩니다.</p>
+            <p>브라우저 창 크기를 조절해보세요!</p>
+        </main>
+    </div>
+</body>
+</html>

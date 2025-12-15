@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단위 비교</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { padding: 20px; font-family: Arial, sans-serif; }
+        h3 { margin: 20px 0 10px; }
+        
+        .box {
+            padding: 20px;
+            margin-bottom: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        /* 고정 너비 */
+        .fixed {
+            width: 500px;
+            background-color: #e74c3c;
+        }
+        
+        /* 퍼센트 너비 */
+        .percent {
+            width: 80%;
+            background-color: #3498db;
+        }
+        
+        /* vw 너비 */
+        .vw {
+            width: 50vw;
+            background-color: #2ecc71;
+        }
+        
+        /* max-width 조합 */
+        .fluid {
+            width: 90%;
+            max-width: 600px;
+            background-color: #9b59b6;
+        }
+    </style>
+</head>
+<body>
+    <h2>너비 단위 비교</h2>
+    <p>브라우저 창 크기를 조절해보세요!</p>
+    
+    <h3>width: 500px (고정)</h3>
+    <div class="box fixed">500px - 화면이 작아지면 잘림</div>
+    
+    <h3>width: 80% (부모 기준)</h3>
+    <div class="box percent">80% - 부모의 80%</div>
+    
+    <h3>width: 50vw (뷰포트 기준)</h3>
+    <div class="box vw">50vw - 화면 너비의 50%</div>
+    
+    <h3>width: 90% + max-width: 600px (권장)</h3>
+    <div class="box fluid">유동적이지만 최대 600px</div>
+</body>
+</html>
