@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>다크 모드 변경</title>
+    <style>
+      .dark {
+        background: #1a1a1a;
+        color: #fff;
+      }
+      .theme-btn {
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text">클릭하면 라이트모드/다크모드 가 변환됩니다.</p>
+    <button class="theme-btn" id="themeBtn">🌙 다크모드</button>
+    <script>
+      const btn = document.getElementById("btn");
+      const text = document.getElementById("text");
+      const themeBtn = document.getElementById("themeBtn");
+      const body = document.body;
+
+      themeBtn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+        if (body.classList.contains("dark")) {
+          themeBtn.textContent = "☀️라이트모드";
+        } else {
+          themeBtn.textContent = "🌙다크모드";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소 추가</title>
+  </head>
+  <body>
+    <button id="addBtn">항목 추가</button>
+    <ul id="list">
+      <li>기존 항목</li>
+    </ul>
+    <script>
+      const addBtn = document.getElementById("addBtn");
+      const list = document.getElementById("list");
+
+      let count = 1;
+      addBtn.addEventListener("click", () => {
+        const new_element = document.createElement("li");
+        new_element.textContent = `추가 항목 ${count++}`;
+        list.appendChild(new_element);
+      });
+    </script>
+  </body>
+</html>

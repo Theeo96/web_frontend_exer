@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클릭 카운터</title>
+  </head>
+  <body>
+    <button id="btn">클릭!</button>
+    <p id="result">0</p>
+    <script>
+      const btn = document.getElementById("btn");
+      const result = document.getElementById("result");
+
+      btn.addEventListener("click", add_count);
+
+      function add_count() {
+        new_num = Number(result.textContent);
+        new_num++;
+        result.textContent = new_num;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글자 수 세기</title>
+  </head>
+  <body>
+    <textarea id="message" placeholder="메시지 입력"></textarea>
+    <p>글자수: <span id="count">0</span>/100</p>
+
+    <script>
+      const message = document.getElementById("message");
+      const count = document.getElementById("count");
+
+      message.addEventListener("input", () => {
+        count.textContent = message.value.length;
+      });
+    </script>
+  </body>
+</html>

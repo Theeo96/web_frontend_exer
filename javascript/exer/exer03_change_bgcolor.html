@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        color: white;
+      }
+      #btnRed {
+        background-color: red;
+      }
+      #btnBlue {
+        background-color: blue;
+      }
+      #btnGreen {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btnRed">빨강</button>
+    <button id="btnBlue">파랑</button>
+    <button id="btnGreen">초록</button>
+    <script>
+      const btnRed = document.getElementById("btnRed");
+      const btnBlue = document.getElementById("btnBlue");
+      const btnGreen = document.getElementById("btnGreen");
+
+      btnRed.addEventListener("click", () => {
+        document.body.style.backgroundColor = "red";
+      });
+      btnBlue.addEventListener("click", () => {
+        document.body.style.backgroundColor = "blue";
+      });
+      btnGreen.addEventListener("click", () => {
+        document.body.style.backgroundColor = "green";
+      });
+    </script>
+  </body>
+</html>

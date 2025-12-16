@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h1 id="title">안녕하세요</h1>
+    <p class="desc">첫 번째 설명</p>
+    <p class="desc">두 번째 설명</p>
+    <!-- <script src="abc.js"></script> -->
+    <script>
+      // const title = document.getElementById("title");
+      // console.log(title);
+
+      // const firstDesc = document.querySelector(".desc");
+      // console.log(firstDesc);
+
+      // const allDesc = document.querySelectorAll(".desc");
+      // console.log(allDesc);
+
+      const title = document.getElementById("title");
+      console.log(title.textContent);
+      title.textContent = "반갑습니다다다다";
+      console.log(title.textContent);
+      title.innerHTML = "<strong>반갑습니다요</strong>";
+      console.log(title.textContent);
+    </script>
+  </body>
+</html>

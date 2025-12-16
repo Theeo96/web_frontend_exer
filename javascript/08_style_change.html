@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스타일 변경</title>
+    <style>
+      .highlight {
+        background: yellow;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text">클릭하면 강조됩니다</p>
+    <button id="btn">강조 토글</button>
+    <script>
+      const btn = document.getElementById("btn");
+      const text = document.getElementById("text");
+
+      // btn.addEventListener("click", () => {
+      //   text.style.backgroundColor = "yellow";
+      //   text.style.color = "red";
+      // });
+
+      btn.addEventListener("click", () => {
+        text.classList.toggle("highlight");
+      });
+    </script>
+  </body>
+</html>

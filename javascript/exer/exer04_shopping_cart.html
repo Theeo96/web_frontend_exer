@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>장바구니</title>
+    <style>
+      .product-btn {
+        padding: 10px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .delete-btn {
+        padding: 10px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      .cart-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+      }
+      #total {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>상품 목록</h2>
+    <button class="product-btn" data-name="사과" data-price="1000">
+      🍎 사과 1,000원
+    </button>
+    <button class="product-btn" data-name="바나나" data-price="1500">
+      🍌 바나나 1,500원
+    </button>
+    <button class="product-btn" data-name="오렌지" data-price="2000">
+      🍊 오렌지 2,000원
+    </button>
+
+    <h2>장바구니</h2>
+    <ul id="cart"></ul>
+    <div id="total">총 합계: 0원</div>
+
+    <script>
+      const cart = document.getElementById("cart");
+      const total = document.getElementById("total");
+      const productBtns = document.querySelectorAll(".product-btn");
+
+      total_price = 0;
+
+      for (let i = 0; i < productBtns.length; i++) {
+        const productBtn = productBtns[i];
+
+        productBtn.addEventListener("click", () => {
+          const name = productBtn.dataset.name;
+          const price = Number(productBtn.dataset.price);
+
+          const new_element = document.createElement("li");
+          new_element.classList.add("cart-item");
+          // new_element.textContent = `${name} 1개 추가 - ${price}원`;
+          new_element.innerHTML = `<span class="cart-item">${name} 1개 추가 - ${price}원</span>
+            <button class="delete-btn">삭제</button>`;
+
+          const deleteBtn = new_element.querySelector(".delete-btn");
+          deleteBtn.addEventListener("click", () => {
+            total_price -= price;
+            total.textContent = `총 합계: ${total_price}원`;
+            new_element.remove();
+          });
+          cart.appendChild(new_element);
+
+          total_price += price;
+          total.textContent = `총 합계: ${total_price}원`;
+        });
+      }
+    </script>
+  </body>
+</html>
