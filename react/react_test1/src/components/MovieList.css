@@ -1,0 +1,12 @@
+.card-container {
+  background-color: #eee;
+  margin:5px;
+  padding:5px;
+  width:200px;
+  border-radius: 5px;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+}
